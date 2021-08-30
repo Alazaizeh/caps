@@ -1,0 +1,25 @@
+{
+  "name": "caps",
+  "version": "1.0.0",
+  "description": "",
+  "main": "events.js",
+  "scripts": {
+    "start": "node caps.js",
+    "test": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Omx302/caps.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Omx302/caps/issues"
+  },
+  "homepage": "https://github.com/Omx302/caps#readme",
+  "dependencies": {
+    "jest": "^27.1.0",
+    "supertest": "^6.1.6"
+  }
+}
