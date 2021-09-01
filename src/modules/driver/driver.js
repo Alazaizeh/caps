@@ -1,5 +1,8 @@
 "use strict";
-const event = require("../../events");
+const io = require("socket.io-client");
+const event = io.connect("http://localhost:3000");
+
+event.emit("driverGetAll");
 
 event.on("post-Pickup", (payload) => {
   setTimeout(() => {
@@ -11,7 +14,6 @@ event.on("post-Pickup", (payload) => {
 event.on("post-Transit", (payload) => {
   setTimeout(() => {
     console.log(`DRIVER: delivered  up ${payload.orderID}`);
-    event.emit("pre-delivery", payload);
+    event.emit("post-delivery", payload);
   }, 3000);
 });
-module.exports = event;
